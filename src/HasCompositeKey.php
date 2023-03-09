@@ -64,7 +64,7 @@ trait HasCompositeKey
     }
 
     /**
-     * Finds model by primary keys
+     * Find model by primary keys
      *
      * @param array $ids
      * @return mixed
@@ -86,12 +86,12 @@ trait HasCompositeKey
     }
 
     /**
-     * Find model by primary key or throws ModelNotFoundException
+     * Find model by primary keys or throw ModelNotFoundException
      *
      * @param array $ids
      * @return mixed
      */
-    public function findOrFail(array $ids)
+    public static function findOrFail(array $ids)
     {
         if (!isset($this)) {
             $modelClass = self::class;
